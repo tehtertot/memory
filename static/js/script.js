@@ -1,4 +1,4 @@
-var arrOfImages = ["csharplogo.png", "csslogo.png", "htmllogo.png", "javalogo.png", "jslogo.png", "pythonlogo.png"];
+var arrOfImages = ["csharplogo.png", "csslogo.png", "htmllogo.png", "javalogo.png", "jslogo.png", "pythonlogo.png", "posing_panda.jpg", "cat.jpg", "corgi.jpg"];
 
 function doubleImages(arr) {
   for (var i = arr.length - 1; i >= 0; i--) {
@@ -51,6 +51,7 @@ function hideACard(idx) {
   var specificCard = document.getElementById(idx);
   // set the image's source to the question mark
   specificCard.src = "static/images/questionmark.png";
+  specificCard.style.border = "2px solid black";
 }
 
 for (var i = 0; i < arrOfImages.length; i++) {
@@ -64,6 +65,7 @@ function revealCard(event) {
         
     var clickedImage = document.getElementById(clickedImageId); 
     clickedImage.src = "static/images/" + arrOfImages[clickedImageId];
+    clickedImage.style.border = "5px solid green";
     
     // add the clicked image to our array
     cardsPicked.push(clickedImageId);
